@@ -1,0 +1,14 @@
+/.next
+/.vscode
+/coverage
+/dist
+/node_modules
+/public/workbox-*.js*
+/public/sw.js*
+/scripts
+/tmp
+.DS_Store
+.env*
+.wakatime-project
+npm-debug.log
+Thumbs.db
