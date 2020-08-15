@@ -1,2 +1,1 @@
-# Build and Connect - Server
-
+# Build and Connect - Client
