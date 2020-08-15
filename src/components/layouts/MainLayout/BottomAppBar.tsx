@@ -1,11 +1,11 @@
 import AppBar from '@material-ui/core/AppBar';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
+import AccountTreeIcon from '@material-ui/icons/AccountTree';
 import HomeIcon from '@material-ui/icons/Home';
-import WorkIcon from '@material-ui/icons/Work';
-import ListIcon from '@material-ui/icons/ListAlt';
 import PersonIcon from '@material-ui/icons/Person';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
+import WorkIcon from '@material-ui/icons/Work';
 import { useRouter } from 'next/router';
 import React, { FunctionComponent, ReactElement, useContext } from 'react';
 import Link from 'next/link';
@@ -22,8 +22,8 @@ const BottomAppBar: FunctionComponent = (): ReactElement => {
       return 'me';
     } else if (/^\/jobs/.test(router.pathname)) {
       return 'jobs';
-    } else if (/^\/feature2/.test(router.pathname)) {
-      return 'feature2';
+    } else if (/^\/skills/.test(router.pathname)) {
+      return 'skills';
     }
   })();
 
@@ -56,13 +56,13 @@ const BottomAppBar: FunctionComponent = (): ReactElement => {
           value="jobs"
         />
         <BottomNavigationAction
-          label="Feature 2"
+          label="Skills"
           icon={
-            <Link href="/feature2">
-              <ListIcon />
+            <Link href="/skills">
+              <AccountTreeIcon />
             </Link>
           }
-          value="feature2"
+          value="skills"
         />
         <BottomNavigationAction
           label={currentUser ? 'me' : 'login'}

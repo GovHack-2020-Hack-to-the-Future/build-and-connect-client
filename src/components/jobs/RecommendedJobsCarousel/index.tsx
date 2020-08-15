@@ -25,12 +25,12 @@ const RecommendedJobsCarousel: FunctionComponent = (): ReactElement => {
       <RecommendedJobCarouselItem
         imageSource="/images/jobs/strawberry-picker.jpg"
         name="Strawberry Picker"
-        uri="/jobs/strawberry-picker"
+        uri="/jobs/strawberry%20picker"
       />
       <RecommendedJobCarouselItem
         imageSource="/images/jobs/auto-mechanic.jpg"
         name="Auto Mechanic"
-        uri="/jobs/auto-mechanic.jpg"
+        uri="/jobs/auto%20mechanic"
       />
       <RecommendedJobCarouselItem
         imageSource="/images/jobs/cleaner.jpg"

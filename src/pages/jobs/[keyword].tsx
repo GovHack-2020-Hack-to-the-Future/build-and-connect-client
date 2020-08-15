@@ -8,21 +8,17 @@ import Router, { useRouter } from 'next/router';
 import React, { ReactElement } from 'react';
 
 import KeywordSearch from '../../components/common/KeywordSearch';
+import JobListItem from '../../components/jobs/JobListItem';
 import MainLayout from '../../components/layouts/MainLayout';
 import { environment } from '../../environment';
 
-import RecommendedJobsCarousel from '../../components/jobs/RecommendedJobsCarousel';
-
-type Props = {
-  initialApolloState: any;
-};
-
-const JobsPage: NextPage = (): ReactElement => {
-  const { asPath } = useRouter();
+const JobsSearchPage: NextPage = (): ReactElement => {
+  const { query, asPath } = useRouter();
+  const { keyword } = query;
   const baseUrl = environment.baseUrl;
   const url = `${baseUrl}${asPath}`;
-  const description = 'Find your perfect opportunity';
-  const title = 'Browse Jobs';
+  const description = `Search jobs related to "${keyword}"`;
+  const title = `Search Jobs - ${keyword}`;
   const seoProps: NextSeoProps = {
     description,
     title,
@@ -42,29 +38,52 @@ const JobsPage: NextPage = (): ReactElement => {
     Router.push(`/jobs/${keyword}`);
   };
 
+  const jobs = [];
+
+  for (let i = 0; i < 10; i++) {
+    jobs.push({
+      id: `${i}`,
+      imageSource: `/images/jobs/${keyword}.jpg`,
+      isNewArrival: Math.floor(Math.random() * 100) % 2 === 0,
+      name: keyword,
+      numOfHours: Math.floor(Math.random() * 100),
+    });
+  }
+
   return (
-    <MainLayout content={{ style: { marginTop: '8em' } }} seoProps={seoProps}>
+    <MainLayout
+      content={{ style: { marginTop: '5em' } }}
+      seoProps={seoProps}
+      topAppBar={{ backAs: '/jobs', backHref: '/jobs' }}
+    >
       <Container>
         <Grid container spacing={4}>
-          <Grid item xs={12}>
-            <Typography align="center" variant="h5" component="h1">
-              Find your perfect opportunity
-            </Typography>
-          </Grid>
           <Grid item xs={12}>
             <KeywordSearch onClick={handleKeywordSearch} />
           </Grid>
           <Grid item xs={12}>
-            <Typography color="textSecondary" variant="subtitle1" gutterBottom>
-              Or browse based on your profile interests
+            <Typography variant="subtitle1" component="h1">
+              {`Showing results for "${keyword}"`}
             </Typography>
           </Grid>
           <Grid item xs={12}>
-            <RecommendedJobsCarousel />
+            <Grid container spacing={2}>
+              {jobs.map((job: any): any => (
+                <Grid item xs={12} sm={6} md={4} key={job.id}>
+                  <JobListItem
+                    imageSource={job.imageSource}
+                    isNewArrival={job.isNewArrival}
+                    name={job.name}
+                    onClick={() => {}}
+                    numOfHours={job.numOfHours}
+                  />
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
           <Grid item xs={12}>
             <Button color="primary" fullWidth variant="text">
-              Show All
+              Show More
             </Button>
           </Grid>
         </Grid>
@@ -73,4 +92,4 @@ const JobsPage: NextPage = (): ReactElement => {
   );
 };
 
-export default JobsPage;
+export default JobsSearchPage;
