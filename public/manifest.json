@@ -1,7 +1,7 @@
 {
   "background_color": "#ffffff",
-  "categories": ["business"],
-  "description": "Next Apollo Template",
+  "categories": ["government"],
+  "description": "Build and Connect",
   "display": "standalone",
   "icons": [
     {
@@ -45,10 +45,10 @@
       "type": "image/png"
     }
   ],
-  "name": "Next Apollo Template",
+  "name": "Build and Connect",
   "orientation": "portrait-primary",
   "Scope": "/",
-  "short_name": "Next Apollo Template",
+  "short_name": "Build and Connect",
   "start_url": "/",
   "theme_color": "#002366"
 }

@@ -2,7 +2,7 @@ import AppBar from '@material-ui/core/AppBar';
 import BottomNavigation from '@material-ui/core/BottomNavigation';
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
 import HomeIcon from '@material-ui/icons/Home';
-import MenuIcon from '@material-ui/icons/Menu';
+import WorkIcon from '@material-ui/icons/Work';
 import ListIcon from '@material-ui/icons/ListAlt';
 import PersonIcon from '@material-ui/icons/Person';
 import VpnKeyIcon from '@material-ui/icons/VpnKey';
@@ -20,12 +20,8 @@ const BottomAppBar: FunctionComponent = (): ReactElement => {
       return 'home';
     } else if (/^\/users\/me/.test(router.pathname)) {
       return 'me';
-    } else if (
-      /^\/feature1/.test(router.pathname) ||
-      /^\/feature1a/.test(router.pathname) ||
-      /^\/feature1b/.test(router.pathname)
-    ) {
-      return 'feature1';
+    } else if (/^\/jobs/.test(router.pathname)) {
+      return 'jobs';
     } else if (/^\/feature2/.test(router.pathname)) {
       return 'feature2';
     }
@@ -51,13 +47,13 @@ const BottomAppBar: FunctionComponent = (): ReactElement => {
           value="home"
         />
         <BottomNavigationAction
-          label="Feature 1"
+          label="Jobs"
           icon={
-            <Link href="/feature1">
-              <MenuIcon />
+            <Link href="/jobs">
+              <WorkIcon />
             </Link>
           }
-          value="menu"
+          value="jobs"
         />
         <BottomNavigationAction
           label="Feature 2"
