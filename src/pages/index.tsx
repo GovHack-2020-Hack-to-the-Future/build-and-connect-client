@@ -11,7 +11,7 @@ import { environment } from '../environment';
 
 const HomePage: NextPage = (): ReactElement => {
   const slogan = environment.app.slogan;
-  const title = 'Home';
+  const title = environment.app.name;
   const seoProps: NextSeoProps = {
     title,
     titleTemplate: `%s - ${slogan}`,
@@ -26,7 +26,7 @@ const HomePage: NextPage = (): ReactElement => {
             <Grid container spacing={4}>
               <Grid item xs={12}>
                 <Typography component="p" variant="body1">
-                  <strong>Minterim</strong> is a platform to recover from
+                  <strong>{title}</strong> is a platform to recover from
                   COVID-19 employment disruption by linking job seekers with
                   businesses through short-term tasks to form new networks and
                   generate references. Businesses benefit from reduction in
