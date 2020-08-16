@@ -1,3 +1,10 @@
+# [1.4.0](https://github.com/govhack-2020-hack-to-the-future/build-and-connect-client/compare/1.3.0...1.4.0) (2020-08-16)
+
+
+### Features
+
+* **users:** add user profile content ([#5](https://github.com/govhack-2020-hack-to-the-future/build-and-connect-client/issues/5)) ([15e4a7c](https://github.com/govhack-2020-hack-to-the-future/build-and-connect-client/commit/15e4a7c06e43e78d2f5b6298e3f16e51a15954d0))
+
 # [1.3.0](https://github.com/govhack-2020-hack-to-the-future/build-and-connect-client/compare/1.2.0...1.3.0) (2020-08-16)
 
 
