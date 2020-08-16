@@ -1,7 +1,0 @@
-query MessageById($id: ID!) {
-  messageById(id: $id) {
-    id
-    description
-    title
-  }
-}

@@ -1,3 +1,4 @@
+import 'react-multi-carousel/lib/styles.css';
 import { ApolloProvider } from '@apollo/client';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
