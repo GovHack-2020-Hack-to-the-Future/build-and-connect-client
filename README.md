@@ -1,4 +1,6 @@
-# Minterim (Formerly Known as `Build and Connect`) - Client
+# Minterim - Client
+
+_(Formerly Known as **Build & Connect**)_
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/govHack-2020-hack-to-the-future/build-and-connect-client/blob/master/LICENSE)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/prettier/prettier)
@@ -7,3 +9,10 @@
 
 Assisting job seekers to take advantage of digital employment services:
 https://hackerspace.govhack.org/challenges/assisting_job_seekers_to_take_advantage_of_digital_employment_services
+
+# Quick Start
+
+- Minterim Homepage: https://minterim.now.sh
+- Jobs Search: https://minterim.now.sh/jobs
+- Jobs Search Result (e.g. "Banana Picker") - https://minterim.now.sh/jobs/banana-picker
+- User Profile page: https://minterim.now.sh/users/me
