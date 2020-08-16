@@ -41,9 +41,14 @@ const JobsSearchPage: NextPage = (): ReactElement => {
   const jobs = [];
 
   for (let i = 0; i < 10; i++) {
+    const imageSource = keyword
+      ? `/images/jobs/${(keyword as string)
+          .toLowerCase()
+          .replace(/\s/g, '-')}.jpg`
+      : `/images/jobs/default.jpg`;
     jobs.push({
+      imageSource,
       id: `${i}`,
-      imageSource: `/images/jobs/${keyword}.jpg`,
       isNewArrival: Math.floor(Math.random() * 100) % 2 === 0,
       name: keyword,
       numOfHours: Math.floor(Math.random() * 100),
