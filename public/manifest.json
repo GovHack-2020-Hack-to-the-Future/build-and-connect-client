@@ -1,7 +1,7 @@
 {
   "background_color": "#ffffff",
   "categories": ["government"],
-  "description": "Build and Connect",
+  "description": "Minterim",
   "display": "standalone",
   "icons": [
     {
@@ -45,10 +45,10 @@
       "type": "image/png"
     }
   ],
-  "name": "Build and Connect",
+  "name": "Minterim",
   "orientation": "portrait-primary",
   "Scope": "/",
-  "short_name": "Build and Connect",
+  "short_name": "Minterim",
   "start_url": "/",
   "theme_color": "#002366"
 }
