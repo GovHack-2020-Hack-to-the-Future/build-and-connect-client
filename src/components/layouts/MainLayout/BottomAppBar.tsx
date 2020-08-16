@@ -27,9 +27,6 @@ const BottomAppBar: FunctionComponent = (): ReactElement => {
     }
   })();
 
-  console.log('Current user');
-  console.log(currentUser);
-
   return (
     <AppBar
       id="bottom-app-bar"

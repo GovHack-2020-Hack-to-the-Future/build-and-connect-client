@@ -9,7 +9,8 @@ import React, { ReactElement } from 'react';
 
 import MainLayout from '../../components/layouts/MainLayout';
 import QualificationsAccordion from '../../components/users/QualificationsAccordion';
-import RecentWorksAccordion from '../../components/users/RecentWorks';
+import RecentWorksAccordion from '../../components/users/RecentWorksAccordion';
+import RecommendationsAccordion from '../../components/users/RecommendationsAccordion';
 import { environment } from '../../environment';
 import { Typography } from '@material-ui/core';
 
@@ -66,6 +67,9 @@ const MyProfilePage: NextPage = (): ReactElement => {
           </Grid>
           <Grid item xs={12}>
             <RecentWorksAccordion />
+          </Grid>
+          <Grid item xs={12}>
+            <RecommendationsAccordion />
           </Grid>
           <Grid item xs={12}>
             <Button

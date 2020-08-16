@@ -34,7 +34,6 @@ const JobsSearchPage: NextPage = (): ReactElement => {
    * @param keyword - Keyword.
    */
   const handleKeywordSearch = (keyword: string): void => {
-    console.log(keyword);
     Router.push(`/jobs/${keyword}`);
   };
 
